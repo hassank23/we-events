@@ -7,8 +7,8 @@ import ContactUs from './ContactUs';
 class Home extends Component{
     render(){
         return (
-            <div>
-          <div id="hero" className="d-flex align-items-center">
+            <div >
+          <div id="hero" className="d-flex align-items-center  ">
             <div className="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay={100}>
               <div className="row">
                 <div className="col-lg-8">

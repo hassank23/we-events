@@ -942,9 +942,9 @@ section {
 # Footer
 --------------------------------------------------------------*/
 
-.footer {
+.fixed-bottom {
     left: 0;
-    height: 20%;
+    height: 5%;
     width: 100%;
     background-color: black;
     color: white;

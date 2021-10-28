@@ -6,7 +6,7 @@ function Footer() {
         return (
     
           
-            <div className="footer">
+            <div className="fixed-bottom ">
             &copy; Copyright <strong><span> We Events</span></strong>. All Rights Reserved
           </div>
           
