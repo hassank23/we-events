@@ -18,11 +18,11 @@ function Services(){
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-md-4 services-box wow fadeInUp">
+                  <div className="col-md-4 services-box wow fadeInUp ">
                     <div className="row">
                       <div className="col-md-4">
                         <div className="services-box-icon">
-                          <i className="fas fa-music" />
+                          <i className="fa fa-apple" />
                         </div>
                       </div>
                       <div className="col-md-8">
@@ -50,7 +50,7 @@ function Services(){
                     <div className="row">
                       <div className="col-md-4">
                         <div className="services-box-icon">
-                          <i className="fas fa-camera" />
+                          <i className="fa fa-camera" />
                         </div>
                       </div>
                       <div className="col-md-8">

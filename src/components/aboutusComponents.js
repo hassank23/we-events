@@ -3,7 +3,7 @@ function AboutUs(){
     return(
         <section id="about" className="about">
         <div className="container" data-aos="fade-up">
-  
+          
           <div className="row">
             <div className="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
               <div className="about-img">
@@ -11,6 +11,7 @@ function AboutUs(){
               </div>
             </div>
             <div className="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <div className="section-title"><h2>abous us</h2></div>
               <h3>Life is an event. Make it memorable with us !</h3>
               <p className="fst-italic">
                 WE EVENTS is an honor-winning event, arranging and setting firm. Our full services, all the way subtleties, and administrations make our studio the ideal beginning of everything party style. ​Through imaginative structure

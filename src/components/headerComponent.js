@@ -33,7 +33,7 @@ class Header extends Component{
                     </div>
                   </div>
                         
-                        <div id="header" className="fixed-top d-flex align-items-center  ">
+                        <div id="header" className="fixed-top d-flex align-items-center  container">
                              
                               <Navbar dark  expand="lg">
                               
