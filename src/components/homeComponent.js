@@ -3,7 +3,7 @@ import React,{Component} from "react";
 import AboutUs from "./aboutusComponents";
 import WhyUS from './WhyUs';
 import Services from './services';
-import ContactUs from './ContactUs';
+import Contact from "./ContactUsReact";
 class Home extends Component{
     render(){
         return (
@@ -21,7 +21,7 @@ class Home extends Component{
           <AboutUs/>
           <WhyUS/>
         <Services/>
-        <ContactUs/>
+        <Contact/>
 
             </div>
         );

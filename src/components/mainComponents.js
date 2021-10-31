@@ -6,7 +6,7 @@ import AboutUs from './aboutusComponents';
 import ContactUs from './ContactUs';
 import Services from './services';
 import WhyUs from './WhyUs';
-
+import Contact from './ContactUsReact';
 
 
 import Food from './FoodComponent';
@@ -34,7 +34,7 @@ class Main extends Component {
           <Switch>
               <Route path="/home" component={HomePage} />
               <Route exact path="/aboutus" component={AboutUs}/>
-              <Route exact path="/contactus" component={ContactUs}/>
+              <Route exact path="/contactus" component={Contact}/>
               <Route exact path="/services" component={Services}/>
               <Route exact path="/whyus" component={WhyUs}/>
               <Route exact path="/food" component={Food}/>

@@ -22,7 +22,7 @@ function Services(){
                     <div className="row">
                       <div className="col-md-4">
                         <div className="services-box-icon">
-                          <i className="fa fa-apple" />
+                          <i className="fa fa-birthday-cake" />
                         </div>
                       </div>
                       <div className="col-md-8">
