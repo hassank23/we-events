@@ -253,6 +253,7 @@ h6 {
 
 #header .logo img {
     max-height: 40px;
+    border-radius: 20%;
 }
 
 
@@ -438,11 +439,10 @@ h6 {
     padding: right;
 }
 
-#food-back {
+#wedding-bg {
     width: 100%;
     height: 100vh;
     background: url("./img/2.jpg") top center;
-    background-size: cover;
     position: relative;
     padding: right;
 }
@@ -566,7 +566,7 @@ section {
     padding: 0;
     line-height: 1px;
     margin: 0 0 5px 0;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
     text-transform: uppercase;
     color: #aaaaaa;
     font-family: "Poppins", sans-serif;

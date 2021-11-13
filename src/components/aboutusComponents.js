@@ -17,9 +17,9 @@ function AboutUs(){
                 WE EVENTS is an honor-winning event, arranging and setting firm. Our full services, all the way subtleties, and administrations make our studio the ideal beginning of everything party style. ​Through imaginative structure
                  and immaculate execution, we create permanence, and one-of-a-kind events everything being equal sizes and styles.
               <ul>
-                <li><i className="bi bi-check-circle"></i> Well Organized.</li>
-                <li><i className="bi bi-check-circle"></i> Best Services.</li>
-                <li><i className="bi bi-check-circle"></i> Best Price.</li>
+                <li><i className="fa fa-check-circle"></i> Well Organized.</li>
+                <li><i className="fa fa-check-circle"></i> Best Services.</li>
+                <li><i className="fa fa-check-circle"></i> Best Price.</li>
               </ul></p>
               <p>
                 For a long time our capable, experienced group has aced incalculable festivals – weddings, corporate, occasions,

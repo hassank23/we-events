@@ -2,19 +2,19 @@ import React,{Component} from "react";
 import { Breadcrumb,BreadcrumbItem,Button,Form,FormGroup,Label,Input,Col,Row,FormFeedback} from 'reactstrap';
 import { Link } from "react-router-dom";
 import { render } from "@testing-library/react";
-class Contact extends Component{
+class wedding extends Component{
      constructor(props){
          super(props);
          this.state={
              firstname:'',
              lastname:'',
              email:'',
-             message:'',
+             phone:'',
              touched:{
                  firstname:false,
                  lastname:false,
                  email:false,
-                 message:false,
+                 phone:false,
              }
          }
          this.handleInputChange = this.handleInputChange.bind(this);
@@ -30,7 +30,7 @@ class Contact extends Component{
           [name]: value
         });
     }
-    
+     
     handleSubmit(event) {
         console.log('Current State is: ' + JSON.stringify(this.state));
         alert('Current State is: ' + JSON.stringify(this.state));
@@ -41,12 +41,12 @@ class Contact extends Component{
             touched:{...this.state.touched,[field]:true}
         });
     }
-        validate(firstname,lastname,message,email) {
+        validate(firstname,lastname,phone,email) {
             const errors={
                 firstname:'',
                 lastname:'',
                 email:'',
-                message:'',
+                phone:'',
             };
 
             if (this.state.touched.firstname && firstname.length < 3)
@@ -60,67 +60,20 @@ class Contact extends Component{
         
             if(this.state.touched.email && email.split('').filter(x => x === '@').length !== 1)
                 errors.email = 'Email should contain a @';
-            if(this.state.touched.message && message.length<10 )
-                errors.message="message should be >=10 character";
+           
             return errors;
         }
     
         
  render(){
-    const errors=this.validate(this.state.firstname,this.state.lastname,this.state.message,this.state.email)
-     return(
-         <div className="py-5">
-             <br/>
-             <br/>
-             <br/>
-             <div>
-                    
-                   <div className="col-12 row">
-                   <div className="section-title center">
-                                            <h2>Contact</h2>
-                                        </div>
-                      <h3>Send us your Feedback</h3>
-                   </div>
+    const errors=this.validate(this.state.firstname,this.state.lastname,this.state.phone,this.state.email)
+     return(<div className="py-5"  id="wedding-bg">
+                <div className="col-12 py-5 row">
+                      <h3  className="py-5 border " style={{color:"yellow"}}>Give -us some informations</h3>
+                </div>
 
-                   
-                   <div className="container row col-12 mx-5">
-                        <div id="theContact " className="contact col-lg-4 col-md-4 col-sm-12">
-                         
-                            <div className="container col-12" data-aos="fade-up">
-                                <div className=" mt-5">
-                                    <div className="col-12">
-                                        <div className="info">
-                                            <div className=" address">
-                                                <i className="fa fa-map-marker" />
-                                                <h4>Location:</h4>
-                                                <p>A108 Adam Street, New York, NY 535022</p>
-                                            </div>
-                                            <div className="open-hours">
-                                                <i className=" fa fa-clock-o" />
-                                                <h4>Open Hours:</h4>
-                                                <p>Monday-Saturday:
-                                                    <br />
-                                                    8:00 AM - 5:00 PM
-                                                </p>
-                                            </div>
-                                            <div className="email">
-                                                <i className="	fa fa-envelope" />
-                                                <h4>Email:</h4>
-                                                <p>Wevents@hotmail.com</p>
-                                            </div>
-                                            <div className="phone">
-                                                <i className="fa fa-volume-control-phone" />
-                                                <h4>Call:</h4>
-                                                <p>+961 01 736 333</p>
-                                                <p>+961 70 736 333</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                   
-                       <div className="col-lg-8 col-md-8 col-sm-12 mt-5">
+
+                <div className="col-lg-12 col-md-12 col-sm-12 mt-5">
                         <Form onSubmit={this.handleSubmit}>
                             <FormGroup row >
                                 <div className=" row  px-5 ">
@@ -195,13 +148,14 @@ class Contact extends Component{
                             </FormGroup>
                         </Form>
                         </div>
-                    </div>
-               </div>
-               </div>
-               
-            
-               
-     )
+
+
+
+
+
+     </div>);
     }
 }
-export default Contact
+
+
+export default wedding;

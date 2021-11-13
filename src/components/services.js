@@ -28,7 +28,6 @@ function Services(){
                       <div className="col-md-8">
                         <h3>Catering</h3>
                         <p>We offer a wide array of services for food all different kinds of events. We provide a large banquet hall, capable of holding events such as weddings, birthday parties. Whatever the occasion, there are plenty of reasons to choose us!.</p>
-                        <Link to="/food" className="btnn">Book your food </Link>
                       </div>
                     </div>
                   </div>
@@ -42,7 +41,7 @@ function Services(){
                       <div className="col-md-8">
                         <h3>Music</h3>
                         <p>We celebrate with you your special day by presenting for you a large option of music and DJ's</p>
-                        <a href className="btnn">Choose your Music</a>
+                        
                       </div>
                     </div>
                   </div>
@@ -56,11 +55,15 @@ function Services(){
                       <div className="col-md-8">
                         <h3>Photography</h3>
                         <p>We specialize in wedding photography, we travel to your destination to capture the perfect moment in the perfect place.</p>
-                        <a href="food.html" className="btnn">GET Your Reservation</a>
                         <p />
+                        
                       </div>
+                      
                     </div>
+                    
                   </div>
+                  
+                  <Link to="/book_wedding" className="btnn col-12 " >Book Your Wedding Now</Link>
                 </div>
               </div>
             </div>
