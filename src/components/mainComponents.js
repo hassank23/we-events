@@ -7,7 +7,7 @@ import wedding from './bookWedding';
 import Services from './services';
 import WhyUs from './WhyUs';
 import Contact from './ContactUsReact';
-import Food from './FoodComponent';
+import Food from './bookFood';
 import {Switch,Route,Redirect} from "react-router-dom";
 
 class Main extends Component {
@@ -38,6 +38,7 @@ class Main extends Component {
               <Route exact path="/whyus" component={WhyUs}/>
               <Route exact path="/food" component={Food}/>
               <Route exact path="/book_wedding" component={wedding}/>
+              <Route exact path="/book_food" component={Food}/>
               <Redirect to ="/home"/>
               </Switch>
               

@@ -442,7 +442,7 @@ h6 {
 #wedding-bg {
     width: 100%;
     height: 100vh;
-    background: url("./img/2.jpg") top center;
+    background: url("./img/cat.jpeg") top center;
     position: relative;
     padding: right;
 }
@@ -805,7 +805,7 @@ section {
     width: 80px;
     height: 80px;
     margin: 0 auto;
-    background: linear-gradient(to bottom, rgb(50, 50, 180) 0%, purple 100%);
+    background: linear-gradient(to bottom, rgb(50, 50, 180) 0%, rgb(121, 102, 121) 100%);
     font-size: 40px;
     color: #fff;
     line-height: 80px;

@@ -1,7 +1,7 @@
 import React,{Component} from "react";
-import { Form,FormGroup,Label,Input,Col,Row,FormFeedback} from 'reactstrap';
-import { Link } from 'react-router-dom';
-class wedding extends Component{
+import { Button,Form,FormGroup,Label,Input,Col,Row,FormFeedback} from 'reactstrap';
+
+class Food extends Component{
      constructor(props){
          super(props);
          this.state={
@@ -11,14 +11,12 @@ class wedding extends Component{
              phone:'',
              date:'',
              budget:'',
-             time:'',
              touched:{
                  firstname:false,
                  lastname:false,
                  email:false,
                  phone:false,
                  date:false,
-                 time:false,
                  budget:false,
                
              }
@@ -55,7 +53,7 @@ class wedding extends Component{
                 phone:'',
                 budget:'',
                 date:'',
-                time:''
+               
             };
 
             if (this.state.touched.firstname && firstname.length < 3)
@@ -79,20 +77,19 @@ class wedding extends Component{
         
  render(){
     const errors=this.validate(this.state.firstname,this.state.lastname,this.state.phone,this.state.email)
-     return(<div className="py-5 "  >
+     return(<div className="py-5" >
                 <div className="col-12 py-5 row">
-                      <h3  className="py-3" style={{color:"yellow"}}>Give -us some informations</h3>
+                      <h3  className="py-3" style={{color:"yellow"}}>Food informations</h3>
                 </div>
 
 
-                <div className="col-12 mt-5 container ">
-                        <Form onSubmit={this.handleSubmit} className="bg-purple pt-5">
+                <div className="col-lg-12 col-md-12 col-sm-12 mt-5">
+                        <Form onSubmit={this.handleSubmit}>
                             <FormGroup row >
-                                <div className=" row  ">
+                                <div className=" row  px-5 ">
                                 
-                                <Col  className=" container col-lg-6 col-md-6 col-sm-12  ">
-                                
-                                    <Input type="text" id="firstname" name="firstname" 
+                                <Col  className="col-lg-6 col-md-6 col-sm-12 ">
+                                    <Input type="text" id="firstname" name="firstname"
                                         placeholder="First Name"
                                         value={this.state.firstname}
                                         valid={errors.firstname === ''}
@@ -120,8 +117,8 @@ class wedding extends Component{
                             </FormGroup>
 
                             <FormGroup row >
-                                <div className="container row  py-3">
-                                <Col className="col-lg-6 col-md-6 col-sm-12">
+                                <div className=" row px-5 py-3">
+                                <Col className="col-lg-6 col-md-6 col-sm-12 ">
                                     <Input type="email" id="email" name="email"
                                         placeholder="Email"
                                         value={this.state.email}
@@ -133,7 +130,7 @@ class wedding extends Component{
                                          <FormFeedback>{errors.email}</FormFeedback>
                                 </Col>
                                 
-                                <Col  className="col-lg-6 col-md-6 col-sm-12 ">
+                                <Col  className="col-lg-6 col-md-6 col-sm-12">
                                     <Input type="tel" id="phone" name="phone"
                                          placeholder="exemple:03736333"
                                         value={this.state.phone}
@@ -146,65 +143,39 @@ class wedding extends Component{
                                 </Col>
                                 </div>
                             </FormGroup>
-
-
-
                            <FormGroup row>
-
-
-                           
-                                         
-                                
-
-                           <div className="row ">
-                           <Col  className="col-lg-4 col-md-4 col-sm-12   ">
+                           <div className="px-5 row">
+                           <Col  className="col-lg-6 col-md-6 col-sm-12  ">
                                     <Input type="date" id="date" name="date"
                                         
                                         value={this.state.date}
                                         
                                         onBlur={this.handleBlur('date')}
-                                        onChange={this.handleInputChange} />
-                                   
+                                        onChange={this.handleInputChange}
+                                         />
                                          
                                 </Col>   
-
-                            <Col className=" container col-lg-2 col-md-2 col-sm-12 ">
-                            <Input type="time" id="time" name="time"
-                                        
-                                        value={this.state.time}
-                                        
-                                        onBlur={this.handleBlur('time')}
-                                        onChange={this.handleInputChange} />
-                                </Col>
-                            <Col className=" container col-lg-4 col-md-4 col-sm-12 ">
-                                    <Input type="number" id="budget" name="budget" 
-                                        placeholder="put your budget:5000"
+                         
+                                <Label htmlFor="budget" md={2} className="col-lg-3 col-md-3 col-sm-6 ">put your total budget here</Label>
+                                <Col md={10} className="col-lg-3 col-md-3 col-sm-6 ">
+                                    <Input type="number" id="budget" name="budget"
+                                        placeholder="5000"
                                         value={this.state.budget}
                                         
                                         onBlur={this.handleBlur('budget')}
                                         onChange={this.handleInputChange} />
-
                                    
-                                </Col>
-                            <Col className="col-lg-2 col-md-2 col-sm-12 ">
-                            <div className="input-group mb-3 cp">
-                                
-                                <select class="form-select " id="inputGroupSelect01">
-                                    
-                                    <option value="$" selected>dollars</option>
-                                    <option value="lbp">lebanese lira</option>
-                                    <option value="euro">euro</option>
-                                </select>
-                                </div>
                                 </Col>
                            </div>
                                 
                             </FormGroup>
                             
                             <FormGroup row>
-                                <div className="row px-2 py-5"> 
+                                <div className="row px-2 "> 
                                 <Col className="col-lg-12 col-md-12 col-sm-12">
-                                <Link to="/book_food" className="btnn col-12 " >next</Link>
+                                    <button type="next" className="btn " to="/book_food">
+                                       submit
+                                    </button>
                                 </Col>
                                 </div>
                             </FormGroup>
@@ -220,4 +191,4 @@ class wedding extends Component{
 }
 
 
-export default wedding;
+export default Food;
