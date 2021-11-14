@@ -90,7 +90,7 @@ class wedding extends Component{
                             <FormGroup row >
                                 <div className=" row container ">
                                 
-                                <Col  className=" container col-lg-6 col-md-6 col-sm-12   ">
+                                <Col  className=" container col-lg-6 col-md-6 col-sm-12  col-12 ">
                                 
                                     <Input type="text" id="firstname" name="firstname" 
                                         placeholder="First Name"
@@ -103,7 +103,7 @@ class wedding extends Component{
                                 </Col>
                                 
                                 
-                                <Col  className="col-lg-6 col-md-6 col-sm-12  ">
+                                <Col  className="col-lg-6 col-md-6 col-sm-12 col-12 ">
                                     <Input type="text" id="lastname" name="lastname"
                                         placeholder="Last Name"
                                         value={this.state.lastname}
@@ -121,7 +121,7 @@ class wedding extends Component{
 
                             <FormGroup row >
                                 <div className="container row  py-3">
-                                <Col className="col-lg-6 col-md-6 col-sm-12">
+                                <Col className="col-lg-6 col-md-6 col-sm-12 col-12">
                                     <Input type="email" id="email" name="email"
                                         placeholder="Email"
                                         value={this.state.email}
@@ -156,8 +156,8 @@ class wedding extends Component{
                                          
                                 
 
-                           <div className="row ">
-                           <Col  className="col-lg-4 col-md-4 col-sm-12   ">
+                           <div className="row container">
+                           <Col  className="container col-lg-4 col-md-4 col-sm-4   ">
                                     <Input type="date" id="date" name="date"
                                         
                                         value={this.state.date}
@@ -168,7 +168,7 @@ class wedding extends Component{
                                          
                                 </Col>   
 
-                            <Col className=" container col-lg-2 col-md-2 col-sm-12 ">
+                            <Col className=" container col-lg-2 col-md-2 col-sm-3 ">
                             <Input type="time" id="time" name="time"
                                         
                                         value={this.state.time}
@@ -176,7 +176,7 @@ class wedding extends Component{
                                         onBlur={this.handleBlur('time')}
                                         onChange={this.handleInputChange} />
                                 </Col>
-                            <Col className=" container col-lg-4 col-md-4 col-sm-12 ">
+                            <Col className=" container col-lg-4 col-md-4 col-sm-3 col-12 ">
                                     <Input type="number" id="budget" name="budget" 
                                         placeholder="put your budget:5000"
                                         value={this.state.budget}
@@ -186,7 +186,7 @@ class wedding extends Component{
 
                                    
                                 </Col>
-                            <Col className="col-lg-2 col-md-2 col-sm-12  col-12">
+                            <Col className="col-lg-2 col-md-2 col-sm-3 col-12">
                             <div className="input-group mb-3 cp">
                                 
                                 <select class="form-select " id="inputGroupSelect01">
@@ -203,7 +203,7 @@ class wedding extends Component{
                             
                             <FormGroup row>
                                 <div className="row px-2 py-5"> 
-                                <Col className="col-lg-12 col-md-12 col-sm-12">
+                                <Col className="col-lg-12 col-md-12 col-sm-12 col-12">
                                 <Link to="/book_food" className="btnn col-12 " >next</Link>
                                 </Col>
                                 </div>
