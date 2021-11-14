@@ -5,8 +5,8 @@ class Food extends Component{
      constructor(props){
          super(props);
          this.state={
-             firstname:'',
-             lastname:'',
+             food_tyoe:'',
+             drink_type:'',
              email:'',
              phone:'',
              date:'',
