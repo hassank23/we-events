@@ -85,12 +85,12 @@ class wedding extends Component{
                 </div>
 
 
-                <div className="col-12 mt-5 container ">
-                        <Form onSubmit={this.handleSubmit} className="bg-purple pt-5">
+                <div className="col-lg-12 col-md-12 col-sm-12 mt-5 container ">
+                        <Form onSubmit={this.handleSubmit} className=" pt-5">
                             <FormGroup row >
-                                <div className=" row  ">
+                                <div className=" row container ">
                                 
-                                <Col  className=" container col-lg-6 col-md-6 col-sm-12  ">
+                                <Col  className=" container col-lg-6 col-md-6 col-sm-12   ">
                                 
                                     <Input type="text" id="firstname" name="firstname" 
                                         placeholder="First Name"
@@ -186,7 +186,7 @@ class wedding extends Component{
 
                                    
                                 </Col>
-                            <Col className="col-lg-2 col-md-2 col-sm-12 ">
+                            <Col className="col-lg-2 col-md-2 col-sm-12  col-12">
                             <div className="input-group mb-3 cp">
                                 
                                 <select class="form-select " id="inputGroupSelect01">
