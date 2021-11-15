@@ -466,6 +466,24 @@ h6 {
     padding: right;
 }
 
+#photo-bg {
+    width: 100%;
+    height: 100vh;
+    background: url("./img/p.jpg") top center;
+    background-size: cover;
+    position: fixed;
+    padding: right;
+}
+
+#avenue-bg {
+    width: 100%;
+    height: 100vh;
+    background: url("./img/avenue.jpg") top center;
+    background-size: cover;
+    position: fixed;
+    padding: right;
+}
+
 #hero:before {
     content: "";
     background: rgba(0, 0, 0, 0.5);

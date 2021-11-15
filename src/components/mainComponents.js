@@ -10,6 +10,8 @@ import Contact from './ContactUsReact';
 import Food from './bookFood';
 import {Switch,Route,Redirect} from "react-router-dom";
 import Music from './bookMusic';
+import Photography from './book_photography';
+import Avenue from './bookAvenue';
 class Main extends Component {
    
     
@@ -37,6 +39,8 @@ class Main extends Component {
               <Route exact path="/book_wedding" component={wedding}/>
               <Route exact path="/book_food" component={Food}/>
               <Route exact path="/book_music" component={Music}/>
+              <Route exact path="/book_photography" component={Photography}/>
+              <Route exact path="/book_Avenue" component={Avenue}/>
               <Redirect to ="/home"/>
               </Switch>
               

@@ -150,12 +150,6 @@ class wedding extends Component{
 
 
                            <FormGroup row>
-
-
-                           
-                                         
-                                
-
                            <div className="row container">
                            <Col  className="container col-lg-4 col-md-4 col-sm-4   ">
                                     <Input type="date" id="date" name="date"
