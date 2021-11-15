@@ -53,7 +53,7 @@ class Music extends Component {
 render(){
   
     return(<div className="py-5 row-content" id='music-bg'>
-               <div className="col-12 py-5 row center">
+               <div className="col-12 py-3 row center">
                      <h3  className="pt-5" style={{color:"yellow"}}>book your music</h3>
                </div>
 
@@ -63,7 +63,7 @@ render(){
                             
                             
                         <FormGroup row >
-                                <div className=" row  px-3  ">
+                                <div className=" row  px-5  ">
                                 
                                 <Col className="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <div className="input-group mb-3 cp">
