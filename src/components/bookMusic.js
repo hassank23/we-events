@@ -63,7 +63,7 @@ render(){
                             
                             
                         <FormGroup row >
-                                <div className=" row  px-5  ">
+                                <div className=" row  px-3  ">
                                 
                                 <Col className="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <div className="input-group mb-3 cp">
