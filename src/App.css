@@ -439,11 +439,30 @@ h6 {
     padding: right;
 }
 
+#food-bg {
+    width: 100%;
+    height: 100vh;
+    background: url("./img/c.jpg") top center;
+    background-size: cover;
+    position: fixed;
+    padding: right;
+}
+
 #wedding-bg {
     width: 100%;
     height: 100vh;
-    background: url("./img/cat.jpeg") top center;
-    position: relative;
+    background: url("./img/3.jpg") top center;
+    background-size: cover;
+    position: fixed;
+    padding: right;
+}
+
+#music-bg {
+    width: 100%;
+    height: 100vh;
+    background: url("./img/Vie-bg-first-dance-kiss-on-cheek-spotlight-bridal-party-around-dance-floor.jpg") top center;
+    background-size: cover;
+    position: fixed;
     padding: right;
 }
 

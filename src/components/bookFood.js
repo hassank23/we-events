@@ -1,24 +1,20 @@
 import React,{Component} from "react";
-import { Button,Form,FormGroup,Label,Input,Col,Row,FormFeedback} from 'reactstrap';
+import { Form,Label,FormGroup,Input,Col,FormFeedback} from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 class Food extends Component{
      constructor(props){
          super(props);
          this.state={
-             food_tyoe:'',
+             food_type:'',
              drink_type:'',
-             email:'',
-             phone:'',
-             date:'',
              budget:'',
+             request:'',
              touched:{
-                 firstname:false,
-                 lastname:false,
-                 email:false,
-                 phone:false,
-                 date:false,
+                 food_type:false,
+                 drink_type:false,
                  budget:false,
-               
+                 request:false
              }
          }
          this.handleInputChange = this.handleInputChange.bind(this);
@@ -45,147 +41,92 @@ class Food extends Component{
             touched:{...this.state.touched,[field]:true}
         });
     }
-        validate(firstname,lastname,phone,email) {
-            const errors={
-                firstname:'',
-                lastname:'',
-                email:'',
-                phone:'',
-                budget:'',
-                date:'',
-               
-            };
-
-            if (this.state.touched.firstname && firstname.length < 3)
-            errors.firstname = 'First Name should be >= 3 characters';
-            else if (this.state.touched.firstname && firstname.length > 10)
-            errors.firstname = 'First Name should be <= 10 characters'; 
-            if(this.state.touched.lastname && lastname.length<3 )
-                errors.lastname="last name should be >=3 character";
-            else if (this.state.touched.lastname && lastname.lenght>10)
-                errors.lastname="last name should be <=10 character";
         
-            if(this.state.touched.email && email.split('').filter(x => x === '@').length !== 1)
-                errors.email = 'Email should contain a @';
-                const reg = /^\d+$/;
-                if (this.state.touched.phone && !reg.test(phone) || this.state.touched.phone && phone.length !=8)
-                    errors.phone = 'phone number should contain only numbers and should be = 8 characters an';
 
-            return errors;
-        }
+            
+        
     
         
  render(){
-    const errors=this.validate(this.state.firstname,this.state.lastname,this.state.phone,this.state.email)
-     return(<div className="py-5" >
+   
+     return(<div className="py-5" id='food-bg'>
                 <div className="col-12 py-5 row">
-                      <h3  className="py-3" style={{color:"yellow"}}>Food informations</h3>
+                      <h3  className="pt-5" style={{color:"black"}}>Food informations</h3>
                 </div>
-
+                
+            
+            
 
                 <div className="col-lg-12 col-md-12 col-sm-12 mt-5">
                         <Form onSubmit={this.handleSubmit}>
                             <FormGroup row >
                                 <div className=" row  px-5 ">
                                 
-                                <Col  className="col-lg-6 col-md-6 col-sm-12 ">
-                                    <Input type="text" id="firstname" name="firstname"
-                                        placeholder="First Name"
-                                        value={this.state.firstname}
-                                        valid={errors.firstname === ''}
-                                        invalid={errors.firstname !== ''}
-                                        onBlur={this.handleBlur('firstname')}
-                                        onChange={this.handleInputChange} />
-                                    <FormFeedback>{errors.firstname}</FormFeedback>
+                                <Col className="col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div className="input-group mb-3 cp">
+                                <label class="input-group-text" for="inputGroupSelect01">catring type</label>
+                                <select className="form-select " id="inputGroupSelect01" value={this.state.food_type} onBlur={this.handleBlur('food_type')} onChange={this.handleInputChange} >
+                                    <option value="lebanese">lebaneese</option>
+                                    <option value="chine">chinese</option>
+                                    <option value="arabic">arabic</option>
+                                    <option value="maxican">maxican</option>
+                                    <option value="turkish">turkish</option>
+                                    <option value="japanese">japanese</option>
+                                </select>
+                                </div>
                                 </Col>
-                                
-                                
-                                <Col  className="col-lg-6 col-md-6 col-sm-12  ">
-                                    <Input type="text" id="lastname" name="lastname"
-                                        placeholder="Last Name"
-                                        value={this.state.lastname}
-                                        valid={errors.lastname === ''}
-                                        invalid={errors.lastname !== ''}
-                                        onBlur={this.handleBlur('lastname')}
-                                        onChange={this.handleInputChange}
-                                         />
-                                         <FormFeedback>{errors.lastname}</FormFeedback>
-                                </Col>   
-                                </div> 
-                                    
-                                              
-                            </FormGroup>
+                                </div>
+                                </FormGroup>
 
-                            <FormGroup row >
-                                <div className=" row px-5 py-3">
-                                <Col className="col-lg-6 col-md-6 col-sm-12 ">
-                                    <Input type="email" id="email" name="email"
-                                        placeholder="Email"
-                                        value={this.state.email}
-                                        valid={errors.email === ''}
-                                        invalid={errors.email !== ''}
-                                        onBlur={this.handleBlur('email')}
-                                        onChange={this.handleInputChange}
-                                         />
-                                         <FormFeedback>{errors.email}</FormFeedback>
-                                </Col>
+
+                                <FormGroup row >
+                                <div className=" row  px-5  ">
                                 
-                                <Col  className="col-lg-6 col-md-6 col-sm-12">
-                                    <Input type="tel" id="phone" name="phone"
-                                         placeholder="exemple:03736333"
-                                        value={this.state.phone}
-                                        valid={errors.phone=== ''}
-                                        invalid={errors.phone !== ''}
-                                        onBlur={this.handleBlur('phone')}
+                                <Col className="col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div className="input-group mb-3 cp">
+                                <label class="input-group-text" for="inputGroupSelect02">catring type</label>
+                                <select className="form-select " id="inputGroupSelect02" value={this.state.drink_type} onBlur={this.handleBlur('drink_type')} onChange={this.handleInputChange} >
+                                    <option value="cocktails">cocktails</option>
+                                    <option value="Strawberry Daiquirise">Strawberry Daiquiris</option>
+                                    <option value="Blueberry Vodka Lemonade "> Blueberry Vodka Lemonade </option>
+                                    <option value="Mint Julep">Mint Julep</option>
+                                    <option value="Sea Breeze">Sea Breeze</option>
+                                    <option value="Gin Fizz"> Gin Fizz</option>
+                                </select>
+                                </div>
+                                </Col>
+                                </div>
+                                </FormGroup>
+
+                                <FormGroup row >
+                                <div className="row px-5 ">
+                                <Col  className="col-lg-12 col-md-12 col-sm-12">
+                                <div className="input-group">
+                                <span className="input-group-text">special request</span>
+                                
+                                <Input type="textarea" id="request" name="request" className="form-control" aria-label="special request" 
+                                        rows="6" placeholder="special request here"
+                                        value={this.state.request}
+                                        onBlur={this.handleBlur('request')}
                                         onChange={this.handleInputChange}
                                         />
-                                        <FormFeedback>{errors.phone}</FormFeedback>
+                                </div>
+                                </Col>
+                                </div>
+                                </FormGroup>
+
+                                <FormGroup row>
+                                <div className="row pt-3 "> 
+                                <Col className="col-lg-12 col-md-12 col-sm-12 col-12">
+                                <Link to="/book_music" className="btnn col-12 " >next</Link>
                                 </Col>
                                 </div>
                             </FormGroup>
-                           <FormGroup row>
-                           <div className="px-5 row">
-                           <Col  className="col-lg-6 col-md-6 col-sm-12  ">
-                                    <Input type="date" id="date" name="date"
-                                        
-                                        value={this.state.date}
-                                        
-                                        onBlur={this.handleBlur('date')}
-                                        onChange={this.handleInputChange}
-                                         />
-                                         
-                                </Col>   
-                         
-                                <Label htmlFor="budget" md={2} className="col-lg-3 col-md-3 col-sm-6 ">put your total budget here</Label>
-                                <Col md={10} className="col-lg-3 col-md-3 col-sm-6 ">
-                                    <Input type="number" id="budget" name="budget"
-                                        placeholder="5000"
-                                        value={this.state.budget}
-                                        
-                                        onBlur={this.handleBlur('budget')}
-                                        onChange={this.handleInputChange} />
-                                   
-                                </Col>
-                           </div>
-                                
-                            </FormGroup>
+
+
+                            </Form>
+                            </div>
                             
-                            <FormGroup row>
-                                <div className="row px-2 "> 
-                                <Col className="col-lg-12 col-md-12 col-sm-12">
-                                    <button type="next" className="btn " to="/book_food">
-                                       submit
-                                    </button>
-                                </Col>
-                                </div>
-                            </FormGroup>
-                        </Form>
-                        </div>
-
-
-
-
-
      </div>);
     }
 }

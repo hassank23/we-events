@@ -1,11 +1,11 @@
 import React,{Component} from "react";
-import { Form,FormGroup,Label,Input,Col,Row,FormFeedback} from 'reactstrap';
+import { Form,FormGroup,Input,Col,FormFeedback} from 'reactstrap';
 import { Link } from 'react-router-dom';
 class wedding extends Component{
      constructor(props){
          super(props);
          this.state={
-             firstname:'',
+             food:'',
              lastname:'',
              email:'',
              phone:'',
@@ -69,8 +69,8 @@ class wedding extends Component{
         
             if(this.state.touched.email && email.split('').filter(x => x === '@').length !== 1)
                 errors.email = 'Email should contain a @';
-                const reg = /^\d+$/;
-                if (this.state.touched.phone && !reg.test(phone) || this.state.touched.phone && phone.length !=8)
+            const reg = /^\d+$/;
+            if (this.state.touched.phone && ((!reg.test(phone)) ||( phone.length !=8)))
                     errors.phone = 'phone number should contain only numbers and should be = 8 characters an';
 
             return errors;
@@ -79,8 +79,8 @@ class wedding extends Component{
         
  render(){
     const errors=this.validate(this.state.firstname,this.state.lastname,this.state.phone,this.state.email)
-     return(<div className="py-5 "  >
-                <div className="col-12 py-5 row">
+     return(<div className="pt-5 " id="wedding-bg"  >
+                <div className="col-12 pt-5 row">
                       <h3  className="py-3" style={{color:"yellow"}}>Give -us some informations</h3>
                 </div>
 

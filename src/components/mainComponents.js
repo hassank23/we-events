@@ -9,12 +9,9 @@ import WhyUs from './WhyUs';
 import Contact from './ContactUsReact';
 import Food from './bookFood';
 import {Switch,Route,Redirect} from "react-router-dom";
-
+import Music from './bookMusic';
 class Main extends Component {
-    constructor(props) {
-        super(props);
-
-    }
+   
     
     render() {
         const HomePage=()=>{
@@ -39,6 +36,7 @@ class Main extends Component {
               <Route exact path="/food" component={Food}/>
               <Route exact path="/book_wedding" component={wedding}/>
               <Route exact path="/book_food" component={Food}/>
+              <Route exact path="/book_music" component={Music}/>
               <Redirect to ="/home"/>
               </Switch>
               

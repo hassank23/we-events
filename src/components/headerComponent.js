@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-import { Nav, Navbar,NavbarBrand, NavbarToggler, Collapse, NavItem, ModalHeader,Modal,modalBudy, ModalBody, Button } from 'reactstrap';
+import { Nav, Navbar,NavbarBrand, NavbarToggler, Collapse, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 class Header extends Component{
@@ -28,7 +28,7 @@ class Header extends Component{
                     <div className="container d-flex justify-content-center justify-content-md-between">
                       <div className="contact-info d-flex align-items-center">
                         <i className="fa fa-phone d-flex align-items-center"><span>+961 01 736 333</span></i>
-                        <i className="fa fa-clock d-flex align-items-center ms-4"><span> Mon-Sat: 8AM - 5PM</span></i>
+                        <i className="fa fa-clock-o d-flex align-items-center ms-4"><span> Mon-Sat: 8AM - 5PM</span></i>
                       </div>
                     </div>
                   </div>
@@ -40,7 +40,7 @@ class Header extends Component{
                                   <div className="container">
                                       <NavbarToggler onClick={this.toggleNav} />
                                       
-                                      <NavbarBrand className="mr-auto logo me-auto me-lg-0" href="index.html"><img src='assets/logowe.png' id="i"/></NavbarBrand>
+                                      <NavbarBrand className="mr-auto logo me-auto me-lg-0" href="index.html"><img src='assets/logowe.png' id="i" alt=""/></NavbarBrand>
                                       
                                       <Collapse isOpen={this.state.isNavOpen} navbar>
                                       
