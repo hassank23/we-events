@@ -65,7 +65,7 @@ class Food extends Component{
                                 <Col className="col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div className="input-group mb-3 cp">
                                 <label class="input-group-text" for="inputGroupSelect01">catring type</label>
-                                <select className="form-select " id="inputGroupSelect01" value={this.state.food_type} onBlur={this.handleBlur('food_type')} onChange={this.handleInputChange} >
+                                <select className="form-select " id="inputGroupSelect01" name="food_type" value={this.state.food_type} onBlur={this.handleBlur('food_type')} onChange={this.handleInputChange} >
                                     <option value="lebanese">lebaneese</option>
                                     <option value="chine">chinese</option>
                                     <option value="arabic">arabic</option>
@@ -85,7 +85,7 @@ class Food extends Component{
                                 <Col className="col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div className="input-group mb-3 cp">
                                 <label class="input-group-text" for="inputGroupSelect02">catring type</label>
-                                <select className="form-select " id="inputGroupSelect02" value={this.state.drink_type} onBlur={this.handleBlur('drink_type')} onChange={this.handleInputChange} >
+                                <select className="form-select " id="inputGroupSelect02" name="drink_type"value={this.state.drink_type} onBlur={this.handleBlur('drink_type')} onChange={this.handleInputChange} >
                                     <option value="cocktails">cocktails</option>
                                     <option value="Strawberry Daiquirise">Strawberry Daiquiris</option>
                                     <option value="Blueberry Vodka Lemonade "> Blueberry Vodka Lemonade </option>

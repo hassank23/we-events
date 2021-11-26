@@ -94,22 +94,7 @@ render(){
                                 </Col>
                                 </div>
                                 </FormGroup>
-                                <FormGroup row >
-                                <div className=" container row px-5 pt-2 ">
-                                <Col  className="col-lg-6 col-md-5 col-sm-6">
-                                <div className="input-group">
-                                <span className="input-group-text">number Guests</span>
                                 
-                                <Input type="number" id="numberGuests" name="numberGuests" className="form-control" aria-label="number Guests" 
-                                        rows="1" placeholder="put the number number Guests you need"
-                                        value={this.state.numberGuests}
-                                        onBlur={this.handleBlur('numberGuests')}
-                                        onChange={this.handleInputChange}
-                                        />
-                                </div>
-                                </Col>
-                                </div>
-                                </FormGroup>
 
 
                             <FormGroup row>
