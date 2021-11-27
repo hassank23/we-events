@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-import {Label,Col,Row} from 'reactstrap';
+import {Col,Row} from 'reactstrap';
 import{Control, LocalForm, Errors } from 'react-redux-form';
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !(val) || (val.length <= len);

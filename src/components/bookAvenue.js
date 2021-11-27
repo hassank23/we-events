@@ -21,10 +21,10 @@ render(){
             <div className="row">
                <Menu/>
              
-                          <div onClick={submitForm}>
-                                    <button type="submit" className="btn mb-5 center col-5 ">
+                          <div >
+                                    <Link type="submit" to="/home"className="btn mb-5 center col-5 ">
                                        submit
-                                    </button>
+                                    </Link>
                             </div>
                                
             </div>
