@@ -1,16 +1,21 @@
 import React ,{ Component } from 'react';
 import './App.css';
+import {Provider} from "react-redux";
 import Main from "./components/mainComponents";
-import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
+import {ConfigureStore} from './redux/configureStore';
+const store=ConfigureStore();
 
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <Provider store={store}>
+      <Router>
       <div className="App">
         <Main/>
       </div>
-      </BrowserRouter>
+      </Router>
+      </Provider>
     );
   }
 }
