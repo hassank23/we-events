@@ -9,7 +9,7 @@ class Menu extends Component {
       dishes: [{
         id: 0,
         name: 'Life venue',
-        image: './assets/life.jpeg',
+        image: '../assets/life.jpeg',
         location: "Jieh",
 
         phone: '71-500691'
@@ -17,7 +17,7 @@ class Menu extends Component {
     {
         id: 1,
         name: 'Hilton',
-        image: './assets/R.jpeg',
+        image: '../assets/R.jpeg',
         location: "Beirut",
 
         phone: '01-500666'
@@ -26,7 +26,7 @@ class Menu extends Component {
         id: 2,
 
         name: 'Phoenicia',
-        image: './assets/P.jpg ',
+        image: '../assets/P.jpg ',
         location: "Beirut",
 
         phone: '01-369100'
@@ -35,7 +35,7 @@ class Menu extends Component {
         id: 3,
 
         name: 'Four seasons hotel',
-        image: './assets/F.jpg',
+        image: '../assets/F.jpg',
         location: "Beirut",
 
         phone: '01-761000'
