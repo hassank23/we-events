@@ -1,17 +1,62 @@
 import React,{Component} from "react";
-import { Row,Col} from 'reactstrap';
+import { Row,Col,Input, FormGroup} from 'reactstrap';
 import { Link } from 'react-router-dom';
 import{Control, LocalForm} from 'react-redux-form';
 class wedding extends Component{
-     constructor(props){
-         super(props);
-         this.handleSubmit = this.handleSubmit.bind(this);
-      
-     }
-     handleSubmit(values) {
-        console.log('Current State is: ' + JSON.stringify(values));
-        alert('Current State is: ' + JSON.stringify(values));
-        //event.preventDefault();
+    constructor(props){
+        super(props);
+       
+        this.state = {
+            firstname: '',
+            lastname: '',
+            email: '',
+            phone:'',
+            date:'',
+            time:'',
+            budget:'',
+            currency:'',
+            
+        };
+        this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        
+    }
+        
+    handleInputChange(event) {
+        const target = event.target;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+        const name = target.name;
+    
+        this.setState({
+          [name]: value
+        });
+    }
+
+    handleSubmit=()=> { // Once the form has been submitted, this function will post to the backend
+        const postURL = "http://localhost:3000/bookwedding" //Our previously set up route in the backend
+        fetch(postURL, {
+            method: 'POST',
+            headers: {
+                'Accept': '*/*',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ // We should keep the fields consistent for managing this data later
+                firstname: this.state.firstname,
+                lastname: this.state.lastname,
+                email: this.state.email,
+                phone:this.state.phone,
+                date:this.state.date,
+                time:this.state.time,
+                budget:this.state.budget,
+                currency:this.state.currency,
+                clockedIn:false,
+                dates:[]
+            })
+        })
+        .then(()=>{
+            // Once posted, the user will be notified 
+            alert('You have been added to the system!');
+        })
     }
  render(){
     
@@ -22,44 +67,56 @@ class wedding extends Component{
 
 
                 <div className="col-lg-12 col-md-12 col-sm-12 mt-5 pt-5 container ">
-                        <LocalForm  onSubmit={(values)=>this.handleSubmit(values)} >
+                        <LocalForm onSubmit={this.handleSubmit}>
                             <Row className="form-group">
                                 <div className=" row container ">
                                 
                                 <Col  className=" container col-lg-6 col-md-6 col-sm-12  col-12 ">
                                 
-                                    <Control.text model=".firstname" id="firstname" name="firstname"
+                                    <Input  id="firstname" name="firstname"
                                         placeholder="First Name"
                                         className="form-control"
+                                         
+                                        value={this.state.firstname}
+                                        onChange={this.handleInputChange}
                                         />
                                     
                                 </Col>
                                 
                                 
                                 <Col  className="col-lg-6 col-md-6 col-sm-12 col-12 ">
-                                    <Control.text model=".lastname" id="lastname" name="lastname"
+                                    <Input id="lastname" name="lastname"
                                         placeholder="Last Name"
                                         className="form-control"
+                                         
+                                        value={this.state.lastname}
+                                        onChange={this.handleInputChange}
                                         />
                                         
                                 </Col>   
                                 </div> 
                                     
                                               
-                            </Row>
+                            </Row> 
 
                             <Row className="form-group">
                                 <div className="container row  py-3">
                                 <Col className="col-lg-6 col-md-6 col-sm-12 col-12">
-                                    <Control.text model=".email" id="email" name="email"
+                                    <Input type="email" id="email" name="email"
                                         placeholder="email"
                                         className="form-control"
+                                         
+                                        value={this.state.email}
+                                        onChange={this.handleInputChange}
                                    />
                                 </Col>
                                 
                                 <Col  className="col-lg-6 col-md-6 col-sm-12 ">
-                                    <Control type="number" model=".phone" id="phone" name="phone"
+                                    <Input type="number"  id="phone" name="phone"
                                          placeholder="exemple:03736333" className="form-control"
+                                          
+                                        value={this.state.phone}
+                                        onChange={this.handleInputChange}
                                        />
                                       
                                 </Col>
@@ -68,34 +125,39 @@ class wedding extends Component{
                            <Row className="form-group">
                            <div className="row container">
                            <Col  className="container col-lg-4 col-md-4 col-sm-4   ">
-                                    <Control type="date" model=".date" id="date" name="date"
-                                        
+                                    <Input type="date" model=".date" id="date" name="date"
                                         className="form-control"
+                                         
+                                        value={this.state.date}
+                                        onChange={this.handleInputChange}
                                          />
                                    
                                          
                                 </Col>   
 
                             <Col className=" container col-lg-2 col-md-2 col-sm-3 ">
-                            <Control type="time" model=".time" id="time" name="time"
+                            <Input type="time"  id="time" name="time"
                                         
                                         />
                                 </Col>
                             <Col className=" container col-lg-4 col-md-4 col-sm-3 col-12 ">
-                                    <Control  type="number" model=".budget" id="budget" name="budget" 
+                                    <Input type="number"  id="budget" name="budget" 
                                         placeholder="put your budget:5000" className="form-control"
+                                         
+                                        value={this.state.budget}
+                                        onChange={this.handleInputChange}
                                         />
                                    
                                 </Col>
                             <Col className="col-lg-2 col-md-2 col-sm-3 col-12">
                             <div className="input-group mb-3 cp">
                                 
-                                <Control.select model=".currency" className="form-control" id="inputGroupSelect01" name="currency">
+                                <select className="form-control" id="inputGroupSelect01" name="currency">
                                     
                                     <option value="$" selected>dollars</option>
                                     <option value="lbp">lebanese lira</option>
                                     <option value="euro">euro</option>
-                                </Control.select>
+                                </select>
                                 </div>
                                 </Col>
                            </div>
@@ -105,7 +167,7 @@ class wedding extends Component{
                             <Row className="form-group">
                                 <div className="row px-2 py-5"> 
                                 <Col className="col-lg-12 col-md-12 col-sm-12 col-12">
-                                <Link to="/book_food" className="btnn col-12 " >next</Link>
+                                <Link to="/book_wedding/book_food" className="btnn col-12 " >next</Link>
                                 </Col>
                                 </div>
                             </Row>
